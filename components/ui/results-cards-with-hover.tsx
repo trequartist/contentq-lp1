@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { TrendingUp, Robot, Users, Target } from "lucide-react";
+import { TrendingUp, Notebook as Robot, Users, Target } from "lucide-react";
 
 export function ResultsCardsWithHover() {
   const results = [
