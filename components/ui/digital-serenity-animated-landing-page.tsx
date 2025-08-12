@@ -351,13 +351,13 @@ const DigitalSerenity = () => {
             
             {/* CTAs */}
             <div className="mt-8 flex flex-col sm:flex-row justify-center items-center">
-              <a href="#" className="contentq-cta">
+              <a href="https://cal.com/banish/contentq-exploratory-call-with-anish" className="contentq-cta">
                 Claim Your Authority
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </a>
-              <a href="#" className="contentq-cta-secondary">
+              <a href="https://cal.com/banish/contentq-exploratory-call-with-anish" className="contentq-cta-secondary">
                 15-Min Strategy Call
               </a>
             </div>
