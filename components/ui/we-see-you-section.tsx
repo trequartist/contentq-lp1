@@ -215,7 +215,7 @@ export default function WeSeeYouSection(): JSX.Element {
 
         <div className="text-center pt-2">
           <Button variant="primary" size="lg" showArrow>
-            Chat With Uss
+            Chat With Us
           </Button>
         </div>
       </div>
