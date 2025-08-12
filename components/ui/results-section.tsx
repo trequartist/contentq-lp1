@@ -49,3 +49,4 @@ export default function ResultsSection() {
     </Section>
   );
       <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
+}
