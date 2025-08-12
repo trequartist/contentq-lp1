@@ -224,4 +224,4 @@ export default function WeSeeYouSection(): JSX.Element {
       </div>
     </Section>
   );
-} 
+}
