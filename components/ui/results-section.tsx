@@ -15,10 +15,8 @@ export default function ResultsSection() {
           <SectionHeadline>
             Results That Matter
           </SectionHeadline>
-          <BodyText className="text-xl max-w-3xl mx-auto text-slate-700">
-            Real outcomes from companies building systematic content authority
-          </BodyText>
-        </div>
+        
+        <ResultsCardsWithHover />
 
         <ResultsCardsWithHover />
       </div>
