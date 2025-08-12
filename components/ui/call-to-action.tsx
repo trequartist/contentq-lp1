@@ -67,3 +67,5 @@ function CTA({
 }
 
 export { CTA };
+  )
+}

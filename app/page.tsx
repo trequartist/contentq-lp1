@@ -173,7 +173,7 @@ export default function Home() {
       <WeSeeYouSection />
 
       {/* Bottom Line Section */}
-      <Section variant="white" id="bottom-line" className="py-0">
+      <Section variant="dark" id="bottom-line" className="py-0" style={{ backgroundColor: '#001233' }}>
         <CTA
           badge="The Future is Now"
           title="The Future of B2B Discovery is Being Written Right Now"
