@@ -196,7 +196,7 @@ export default function WeSeeYouSection(): JSX.Element {
               solution="We deliver: Campaigns that convert with clear attribution"
               icon={<TrendingUp className="w-5 h-5" />}
               glowColor="purple"
-              imageUrl="public/images/marketer.png"
+              imageUrl="/images/marketer.png"
             />
           </motion.div>
 
