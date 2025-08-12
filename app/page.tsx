@@ -21,8 +21,8 @@ import { HeroSection } from '@/components/ui/galaxy-interactive-hero-section';
 import AuthoritySprintSection from '@/components/ui/authority-sprint';
 import ResultsSection from '@/components/ui/results-section';
 import WeSeeYouSection from '@/components/ui/we-see-you-section';
-import CTA from '@/components/ui/call-to-action';
-import FounderVisionCard from '@/components/ui/founder-vision-card';
+import { CTA } from '@/components/ui/call-to-action';
+import { FounderVisionCard } from '@/components/ui/founder-vision-card';
 
 // Replace legacy hero with new interactive hero section
 
