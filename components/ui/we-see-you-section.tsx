@@ -185,7 +185,7 @@ export default function WeSeeYouSection(): JSX.Element {
               icon={<Briefcase className="w-5 h-5" />}
               glowColor="blue"
               imageUrl="/home/project/public/images/founder copy.png"
-              fallbackUrl="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1600&auto=format&fit=crop"
+              fallbackUrl=""
             />
           </motion.div>
 
