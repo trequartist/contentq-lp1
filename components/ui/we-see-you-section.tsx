@@ -123,14 +123,12 @@ function PersonaCard({ title, subtitle, problems, solution, icon, glowColor, ima
         <div className="space-y-2 mb-4">
           {problems.map((p, i) => (
             <div key={i} className="flex items-start text-white/80 text-sm">
-              href="https://cal.com/banish/contentq-exploratory-call-with-anish"
               <span className="text-rose-400 mr-2 mt-0.5">❌</span>
               <span>{p}</span>
             </div>
           ))}
         </div>
         <div className="mt-auto">
-              href="https://cal.com/banish/contentq-exploratory-call-with-anish"
           <div className="flex items-start text-white text-sm">
             <span className="text-emerald-400 mr-2 mt-0.5">✅</span>
             <span className="font-medium">{solution}</span>
@@ -186,7 +184,8 @@ export default function WeSeeYouSection(): JSX.Element {
               solution="We handle it: We build your complete content system—from company blog to founder thought leadership—powered by your insights, not your time"
               icon={<Briefcase className="w-5 h-5" />}
               glowColor="blue"
-              imageUrl="/images/founder.png"
+              imageUrl="/images/Messaging from LinkedIn (1)"
+              fallbackUrl="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1600&auto=format&fit=crop"
             />
           </motion.div>
 
@@ -199,6 +198,7 @@ export default function WeSeeYouSection(): JSX.Element {
               icon={<TrendingUp className="w-5 h-5" />}
               glowColor="purple"
               imageUrl="/images/marketer.png"
+              fallbackUrl="https://images.unsplash.com/photo-1544148103-0773bf091fd3?q=80&w=1600&auto=format&fit=crop"
             />
           </motion.div>
 
@@ -211,6 +211,7 @@ export default function WeSeeYouSection(): JSX.Element {
               icon={<Users className="w-5 h-5" />}
               glowColor="green"
               imageUrl="/images/consultant.png"
+              fallbackUrl="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1600&auto=format&fit=crop"
             />
           </motion.div>
         </div>

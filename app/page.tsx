@@ -191,7 +191,7 @@ export default function Home() {
             <Button variant="primary" size="lg" showArrow>
               Start Building Authority – Free Trial
             </Button>
-            <Button variant="secondary" size="lg" href="https://cal.com/banish/contentq-exploratory-call-with-anish">
+            <Button variant="secondary" size="lg">
               Book 15‑Min Strategy Call
             </Button>
           </div>

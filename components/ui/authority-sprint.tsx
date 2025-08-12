@@ -313,4 +313,4 @@ export function AuthoritySprintSection(): JSX.Element {
   );
 }
 
-export default AuthoritySprintSection;
+export default AuthoritySprintSection; 

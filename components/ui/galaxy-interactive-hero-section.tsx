@@ -170,4 +170,4 @@ export function HeroSection(): JSX.Element {
       </div>
     </section>
   );
-}
+} 
