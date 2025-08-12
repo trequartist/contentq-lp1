@@ -349,13 +349,13 @@ const DigitalSerenity = () => {
               <span className="word-animate" data-delay="3700">Teammate.</span>
             </h2>
             
-            {/* CTAs */}
-<div className="mt-8 flex flex-col sm:flex-row justify-center items-center">
+{/* CTAs */}
+<div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
   <a
     href="https://cal.com/banish/contentq-exploratory-call-with-anish"
-    className="contentq-cta"
     target="_blank"
     rel="noopener noreferrer"
+    className="contentq-cta flex items-center"
   >
     Claim Your Authority
     <svg
@@ -363,7 +363,6 @@ const DigitalSerenity = () => {
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
-      aria-hidden="true"
     >
       <path
         strokeLinecap="round"
@@ -376,13 +375,14 @@ const DigitalSerenity = () => {
 
   <a
     href="https://cal.com/banish/contentq-exploratory-call-with-anish"
-    className="contentq-cta-secondary sm:ml-4 mt-4 sm:mt-0"
     target="_blank"
     rel="noopener noreferrer"
+    className="contentq-cta-secondary"
   >
     15-Min Strategy Call
   </a>
 </div>
+
 
             
             <div className="mt-6 flex justify-center space-x-4 opacity-0" style={{ animation: 'word-appear 1s ease-out forwards', animationDelay: '5.4s' }}>
