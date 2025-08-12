@@ -79,7 +79,7 @@ export default function LayoutWrapper({ children }: LayoutWrapperProps) {
               {[
                 { href: '#what-we-do', label: 'What we do' },
                 { href: '#sprint', label: 'Sprint' },
-                { href: '#bottom-line', label: 'Book a call' },
+                { href: 'https://cal.com/banish/contentq-exploratory-call-with-anish', label: 'Book a call' },
               ].map((l) => (
                 <a key={l.href} href={l.href} className="relative text-sm text-zinc-300 hover:text-white transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[1px] after:w-0 after:bg-white/30 after:transition-all after:duration-200 hover:after:w-full">
                   {l.label}
