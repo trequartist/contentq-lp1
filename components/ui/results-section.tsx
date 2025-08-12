@@ -2,7 +2,6 @@ import React from 'react';
 import Section from '@/components/Section';
 import { SectionHeadline, BodyText } from '@/components/Typography';
 import { ResultsCardsWithHover } from './results-cards-with-hover';
-import Section from '@/components/Section';
 
 export default function ResultsSection() {
   return (
@@ -16,15 +15,13 @@ export default function ResultsSection() {
           <SectionHeadline>
             Results That Matter
           </SectionHeadline>
+          <BodyText className="text-xl max-w-3xl mx-auto text-slate-700">
+            Real outcomes from companies building systematic content authority
+          </BodyText>
+        </div>
         
-        <ResultsCardsWithHover />
-
         <ResultsCardsWithHover />
       </div>
     </Section>
   );
-}
-  )
-}
-  )
 }
