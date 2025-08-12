@@ -7,9 +7,7 @@ const nextConfig = {
     }
     return config;
   },
-  compiler: {
-    swcMinify: true,
-  },
+  swcMinify: true,
   eslint: {
     ignoreDuringBuilds: true,
   },

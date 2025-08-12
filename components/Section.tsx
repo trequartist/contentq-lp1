@@ -2,10 +2,10 @@
 
 import { ReactNode, forwardRef } from 'react';
 import { motion } from 'framer-motion';
-import type { Variants, Transition } from 'framer-motion';
+import type { Variants, Transition, HTMLMotionProps } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
-interface SectionProps {
+interface SectionProps extends Omit<HTMLMotionProps<'section'>, 'children' | 'className' | 'id' | 'ref'> {
   children: ReactNode;
   variant?: 'light' | 'white' | 'dark' | 'warm';
   className?: string;
@@ -42,7 +42,7 @@ const containerSizes = {
   full: 'max-w-full',
 };
 
-const Section = forwardRef<HTMLElement, SectionProps>(({
+const Section = forwardRef<HTMLElement, SectionProps>(({ 
   children,
   variant = 'white',
   className,
@@ -76,6 +76,7 @@ const Section = forwardRef<HTMLElement, SectionProps>(({
         !noPadding && 'section-padding',
         className
       )}
+      {...props}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}

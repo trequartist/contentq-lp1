@@ -6,16 +6,17 @@ const DigitalSerenity = () => {
     top: '0px',
     opacity: 0,
   });
-  const [ripples, setRipples] = useState([]);
+  const [ripples, setRipples] = useState<Array<{ id: number; x: number; y: number }>>([]);
   const [scrolled, setScrolled] = useState(false);
-  const wordsRef = useRef([]); // Not strictly necessary if not directly manipulating post-initial animation
-  const floatingElementsRef = useRef([]);
+  const wordsRef = useRef<Element[]>([]); // Not strictly necessary if not directly manipulating post-initial animation
+  const floatingElementsRef = useRef<Array<HTMLElement>>([]);
 
   useEffect(() => {
     const animateWords = () => {
-      const wordElements = document.querySelectorAll('.word-animate');
+      const wordElements = document.querySelectorAll<HTMLElement>('.word-animate');
       wordElements.forEach(word => {
-        const delay = parseInt(word.getAttribute('data-delay')) || 0;
+        const delayAttr = word.getAttribute('data-delay');
+        const delay = delayAttr ? parseInt(delayAttr, 10) : 0;
         setTimeout(() => {
           if (word) word.style.animation = 'word-appear 0.8s ease-out forwards';
         }, delay);
@@ -26,7 +27,7 @@ const DigitalSerenity = () => {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMouseGradientStyle({
         left: `${e.clientX}px`,
         top: `${e.clientY}px`,
@@ -45,7 +46,7 @@ const DigitalSerenity = () => {
   }, []);
 
   useEffect(() => {
-    const handleClick = (e) => {
+    const handleClick = (e: MouseEvent) => {
       const newRipple = { id: Date.now(), x: e.clientX, y: e.clientY };
       setRipples(prev => [...prev, newRipple]);
       setTimeout(() => setRipples(prev => prev.filter(r => r.id !== newRipple.id)), 1000);
@@ -55,9 +56,9 @@ const DigitalSerenity = () => {
   }, []);
   
   useEffect(() => {
-    const wordElements = document.querySelectorAll('.word-animate');
-    const handleMouseEnter = (e) => { if (e.target) e.target.style.textShadow = '0 0 20px rgba(148, 216, 45, 0.5)'; };
-    const handleMouseLeave = (e) => { if (e.target) e.target.style.textShadow = 'none'; };
+    const wordElements = document.querySelectorAll<HTMLElement>('.word-animate');
+    const handleMouseEnter = (e: Event) => { const target = e.target as HTMLElement | null; if (target) target.style.textShadow = '0 0 20px rgba(148, 216, 45, 0.5)'; };
+    const handleMouseLeave = (e: Event) => { const target = e.target as HTMLElement | null; if (target) target.style.textShadow = 'none'; };
     wordElements.forEach(word => {
       word.addEventListener('mouseenter', handleMouseEnter);
       word.addEventListener('mouseleave', handleMouseLeave);
@@ -73,7 +74,7 @@ const DigitalSerenity = () => {
   }, []);
 
   useEffect(() => {
-    const elements = document.querySelectorAll('.floating-element-animate');
+    const elements = document.querySelectorAll<HTMLElement>('.floating-element-animate');
     floatingElementsRef.current = Array.from(elements);
     const handleScroll = () => {
       if (!scrolled) {
@@ -84,7 +85,7 @@ const DigitalSerenity = () => {
               el.style.animationPlayState = 'running';
               el.style.opacity = ''; 
             }
-          }, (parseFloat(el.style.animationDelay || "0") * 1000) + index * 100);
+          }, (parseFloat(el.style.animationDelay || '0') * 1000) + index * 100);
         });
       }
     };
@@ -107,8 +108,36 @@ const DigitalSerenity = () => {
     @keyframes pulse-glow { 0%, 100% { opacity: 0.1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(1.1); } }
     .word-animate { display: inline-block; opacity: 0; margin: 0 0.1em; transition: color 0.3s ease, transform 0.3s ease; }
     .word-animate:hover { color: #94D82D; transform: translateY(-2px); }
-    .word-animate.highlight-changed { color: #94D82D; }
-    .word-animate.highlight-found { color: #94D82D; }
+    .word-animate.highlight-changed, .word-animate.highlight-found { 
+      color: transparent;
+      background: linear-gradient(90deg, #b6f46b, #94D82D);
+      -webkit-background-clip: text;
+              background-clip: text;
+      position: relative;
+      text-shadow: 0 0 16px rgba(148, 216, 45, 0.15);
+    }
+    .word-animate.highlight-changed::after, .word-animate.highlight-found::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: -8px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(148,216,45,0.75) 20%, rgba(148,216,45,0.75) 80%, transparent);
+      border-radius: 9999px;
+      filter: drop-shadow(0 0 6px rgba(148,216,45,0.35));
+    }
+    .hero-spotlight {
+      position: absolute;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      width: clamp(420px, 60vw, 1200px);
+      height: clamp(220px, 38vw, 560px);
+      background: radial-gradient(circle, rgba(148,216,45,0.18), rgba(148,216,45,0.06) 45%, transparent 70%);
+      filter: blur(36px);
+      opacity: 0.35;
+      pointer-events: none;
+    }
+    .hero-headline { letter-spacing: -0.02em; text-shadow: 0 1px 0 rgba(255,255,255,0.02), 0 8px 40px rgba(0,0,0,0.3); }
     .grid-line { stroke: #94a3b8; /* slate-400 */ stroke-width: 0.5; opacity: 0; stroke-dasharray: 5 5; stroke-dashoffset: 1000; animation: grid-draw 2s ease-out forwards; }
     .detail-dot { fill: #94D82D; opacity: 0; animation: pulse-glow 3s ease-in-out infinite; }
     .corner-element-animate { position: absolute; width: 40px; height: 40px; border: 1px solid rgba(148, 216, 45, 0.2); opacity: 0; animation: word-appear 1s ease-out forwards; }
@@ -256,8 +285,10 @@ const DigitalSerenity = () => {
           </div>
 
           <div className="text-center max-w-5xl mx-auto relative">
+            {/* Spotlight behind headline for prominence */}
+            <div className="hero-spotlight"></div>
             {/* Responsive Main Heading Sizes */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 text-decoration-animate">
+            <h1 className="hero-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-[1.05] tracking-tight text-slate-50 text-decoration-animate">
               <div className="mb-4 md:mb-6">
                 <span className="word-animate" data-delay="700">Your</span>
                 <span className="word-animate" data-delay="850">Buyers</span>
@@ -268,7 +299,7 @@ const DigitalSerenity = () => {
                 <span className="word-animate" data-delay="1600">Buy.</span>
               </div>
               {/* Responsive Secondary Heading Sizes & Added tracking-wide for letter spacing */}
-              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light text-slate-300 leading-relaxed tracking-wide">
                 <span className="word-animate" data-delay="1800">Time</span>
                 <span className="word-animate" data-delay="1950">to</span>
                 <span className="word-animate" data-delay="2100">Change</span>

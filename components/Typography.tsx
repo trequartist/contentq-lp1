@@ -1,7 +1,8 @@
 'use client';
 
 import { ReactNode, forwardRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, cubicBezier } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 interface TypographyProps {
@@ -10,17 +11,17 @@ interface TypographyProps {
   animate?: boolean;
 }
 
-const textVariants = {
+const textVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.6, 0.6, 0.4, 1] },
+    transition: { duration: 0.6, ease: cubicBezier(0.6, 0.6, 0.4, 1) },
   },
 };
 
 // Hero Headline Component
-export const HeroHeadline = forwardRef<HTMLHeadingElement, TypographyProps>(({
+export const HeroHeadline = forwardRef<HTMLHeadingElement, TypographyProps>(({ 
   children,
   className,
   animate = true,
@@ -41,7 +42,7 @@ export const HeroHeadline = forwardRef<HTMLHeadingElement, TypographyProps>(({
 });
 
 // Section Headline Component
-export const SectionHeadline = forwardRef<HTMLHeadingElement, TypographyProps>(({
+export const SectionHeadline = forwardRef<HTMLHeadingElement, TypographyProps>(({ 
   children,
   className,
   animate = true,
@@ -62,7 +63,7 @@ export const SectionHeadline = forwardRef<HTMLHeadingElement, TypographyProps>((
 });
 
 // Subheadline Component
-export const Subheadline = forwardRef<HTMLHeadingElement, TypographyProps>(({
+export const Subheadline = forwardRef<HTMLHeadingElement, TypographyProps>(({ 
   children,
   className,
   animate = true,
@@ -83,7 +84,7 @@ export const Subheadline = forwardRef<HTMLHeadingElement, TypographyProps>(({
 });
 
 // Body Text Component
-export const BodyText = forwardRef<HTMLParagraphElement, TypographyProps>(({
+export const BodyText = forwardRef<HTMLParagraphElement, TypographyProps>(({ 
   children,
   className,
   animate = true,
@@ -104,7 +105,7 @@ export const BodyText = forwardRef<HTMLParagraphElement, TypographyProps>(({
 });
 
 // Caption Component
-export const Caption = forwardRef<HTMLParagraphElement, TypographyProps>(({
+export const Caption = forwardRef<HTMLParagraphElement, TypographyProps>(({ 
   children,
   className,
   animate = true,

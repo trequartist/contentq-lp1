@@ -3,67 +3,33 @@ import Link from "next/link";
 
 import { Icons } from "@/components/ui/icons";
 import { Button } from "@/components/ui/button";
+import LogoKiwiQ from "@/components/LogoKiwiQ";
 
 function Footer() {
   return (
-    <footer className="py-12 px-4 md:px-6 bg-slate-900 text-white">
+    <footer className="py-12 px-4 md:px-6 text-white relative overflow-hidden" style={{
+      background: "linear-gradient(180deg, rgba(12,16,24,0.92) 0%, rgba(10,12,18,0.96) 60%, rgba(6,8,12,1) 100%)",
+      WebkitBackdropFilter: "blur(8px)",
+      backdropFilter: "blur(8px)",
+      borderTop: "1px solid rgba(255,255,255,0.06)"
+    }}>
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between">
           <div className="mb-8 md:mb-0">
-            <Link href="/" className="flex items-center gap-2">
-              <Icons.logo className="icon-class w-8" />
-              <h2 className="text-lg font-bold text-white">ContentQ</h2>
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-8 h-8">
+                <LogoKiwiQ className="w-8 h-8" title="KiwiQ AI" />
+              </div>
+              <h2 className="text-lg font-bold text-white">KiwiQ AI</h2>
             </Link>
 
-            <h1 className="text-gray-300 mt-4">
-              Built by{" "}
-              <span className="text-[#94D82D]">
-                <Link href="https://x.com/anishcodes">@AnishAcharya</Link>
-              </span>
-            </h1>
-            <div className="mt-2">
-            <Link href="https://x.com/compose/tweet?text=I%27ve%20been%20using%20%23ContentQ%20share%20your%20thought%20%40anishcodes%20">
-              <Button variant='secondary'>
-                Share Your Thoughts On
-                <Icons.twitter className="icon-class ml-1 w-3.5 " />
-              </Button>
-            </Link>
-            </div>
+            {/* Removed attribution and share button */}
             <p className="text-sm text-gray-400 mt-5">
-              © {new Date().getFullYear()} ContentQ. All rights reserved.
+              © {new Date().getFullYear()} KiwiQ AI. All rights reserved.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="font-semibold mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link href="/services" className="text-gray-400 hover:text-white transition-colors">
-                    Content Intelligence
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/authority" className="text-gray-400 hover:text-white transition-colors">
-                    Authority Building
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/ai-optimization" className="text-gray-400 hover:text-white transition-colors">
-                    AI Optimization
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/linkedin" className="text-gray-400 hover:text-white transition-colors">
-                    LinkedIn Growth
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://blog.contentq.ai/" className="text-gray-400 hover:text-white transition-colors">
-                    Blog
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Removed Services column */}
             <div>
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2">
@@ -87,11 +53,7 @@ function Footer() {
             <div>
               <h3 className="font-semibold mb-4">Socials</h3>
               <ul className="space-y-2">
-                <li>
-                  <Link href="https://github.com/contentq" className="text-gray-400 hover:text-white transition-colors">
-                    Github
-                  </Link>
-                </li>
+                {/* Removed GitHub link */}
                 <li>
                   <Link href="https://www.linkedin.com/company/contentq" className="text-gray-400 hover:text-white transition-colors">
                     LinkedIn
@@ -122,8 +84,8 @@ function Footer() {
           </div>
         </div>
         <div className="w-full flex mt-4 items-center justify-center">
-          <h1 className="text-center text-3xl md:text-5xl lg:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-400 to-gray-600 select-none">
-            ContentQ
+          <h1 className="text-center text-3xl md:text-5xl lg:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-400/70 to-gray-600/40 select-none">
+            KiwiQ AI
           </h1>
         </div>
       </div>
