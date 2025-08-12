@@ -61,13 +61,12 @@ function CTA({
               size="lg"
               onClick={onSecondaryClick}
               className="gap-2 border-white/20 text-white hover:bg-white/10"
-              onClick={() => window.open('https://cal.com/banish/contentq-exploratory-call-with-anish', '_blank')}
             >
               {secondaryButtonText} <PhoneCall className="w-4 h-4" />
             </Button>
           </div>
         </div>
-              onClick={() => window.open('https://cal.com/banish/contentq-exploratory-call-with-anish', '_blank')}
+      </div>
     </div>
   );
 }
