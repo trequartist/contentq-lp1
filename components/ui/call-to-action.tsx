@@ -24,9 +24,9 @@ function CTA({
   onSecondaryClick
 }: CTAProps) {
   return (
-    <div className="w-full py-8 lg:py-12">
+    <div className="w-full py-2 lg:py-3">
       <div className="container mx-auto">
-        <div className="flex flex-col text-center bg-[#001233] rounded-md p-4 lg:p-8 gap-6 items-center">
+        <div className="flex flex-col text-center bg-[#001233] rounded-md p-1 lg:p-2 gap-1 items-center">
           {badge && (
             <div>
               <Badge className="bg-[#94D82D] text-black hover:bg-[#94D82D]/90">
@@ -34,7 +34,7 @@ function CTA({
               </Badge>
             </div>
           )}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-0">
             <h3 className="text-3xl md:text-5xl tracking-tighter max-w-4xl font-regular text-white">
               {title}
             </h3>
@@ -47,7 +47,7 @@ function CTA({
               {description}
             </p>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-1">
             <Button 
               variant="primary" 
               size="lg"

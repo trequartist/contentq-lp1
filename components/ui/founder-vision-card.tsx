@@ -14,7 +14,7 @@ export function FounderVisionCard({ className }: FounderVisionCardProps) {
 
   return (
     <>
-      {/* Focus overlay when expanded */}
+      <div className="relative max-w-4xl mx-auto mt-3 rounded-2xl border border-slate-200/70 bg-white/80 backdrop-blur-md p-2 z-10">
       {expandedFounder && (
         <div className="fixed inset-0 z-[60] bg-black/30 transition-opacity duration-300"></div>
       )}
@@ -34,7 +34,7 @@ export function FounderVisionCard({ className }: FounderVisionCardProps) {
           Founder's Vision
         </Badge>
         
-        <div className="space-y-4 text-slate-800">
+        <div className="space-y-1 text-slate-800">
           {/* Visible Content */}
           <p className="text-lg font-medium">💭 Why We Built This</p>
           
@@ -58,7 +58,7 @@ export function FounderVisionCard({ className }: FounderVisionCardProps) {
             "transition-all duration-300 ease-linear overflow-hidden",
             expandedFounder ? "opacity-100 max-h-[2000px]" : "opacity-0 max-h-0"
           )}>
-            <div className="space-y-4 pt-2">
+            <div className="space-y-1 pt-1">
               <p className="text-base leading-relaxed">
                 "We're building AI that actually knows you. Most people don't realize what's possible yet. AI can be so much more than a writing assistant. We're building systems with actual memory — that learn your voice, carry your context, and get smarter about your business every single day. Raunak led ML at Google Gemini. I've been obsessed with storytelling for years."
               </p>
@@ -73,7 +73,7 @@ export function FounderVisionCard({ className }: FounderVisionCardProps) {
               </p>
               <button
                 onClick={() => setExpandedFounder(false)}
-                className="mt-2 inline-flex items-center gap-2 text-[#94D82D] font-medium hover:text-[#85C326] transition-colors"
+                className="mt-0 inline-flex items-center gap-2 text-[#94D82D] font-medium hover:text-[#85C326] transition-colors"
               >
                 Show less
                 <span className="transition-transform duration-300">↑</span>
