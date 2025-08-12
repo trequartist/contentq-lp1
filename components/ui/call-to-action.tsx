@@ -68,7 +68,6 @@ function CTA({
           </div>
         </div>
               onClick={() => window.open('https://cal.com/banish/contentq-exploratory-call-with-anish', '_blank')}
-      </div>
     </div>
   );
 }
