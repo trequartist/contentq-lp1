@@ -123,12 +123,14 @@ function PersonaCard({ title, subtitle, problems, solution, icon, glowColor, ima
         <div className="space-y-2 mb-4">
           {problems.map((p, i) => (
             <div key={i} className="flex items-start text-white/80 text-sm">
+              href="https://cal.com/banish/contentq-exploratory-call-with-anish"
               <span className="text-rose-400 mr-2 mt-0.5">❌</span>
               <span>{p}</span>
             </div>
           ))}
         </div>
         <div className="mt-auto">
+              href="https://cal.com/banish/contentq-exploratory-call-with-anish"
           <div className="flex items-start text-white text-sm">
             <span className="text-emerald-400 mr-2 mt-0.5">✅</span>
             <span className="font-medium">{solution}</span>
