@@ -15,6 +15,7 @@ export function FounderVisionCard({ className }: FounderVisionCardProps) {
   return (
     <>
       <div className="relative max-w-4xl mx-auto mt-3 rounded-2xl border border-slate-200/70 bg-white/80 backdrop-blur-md p-2 z-10">
+      </div>
       {expandedFounder && (
         <div className="fixed inset-0 z-[60] bg-black/30 transition-opacity duration-300"></div>
       )}
