@@ -214,13 +214,9 @@ export default function WeSeeYouSection(): JSX.Element {
         </div>
 
         <div className="text-center pt-2">
-          <Link href="https://cal.com/banish/contentq-exploratory-call-with-anish">
-  <a>
-    <Button variant="primary" size="lg" showArrow>
-      Chat With Us
-    </Button>
-  </a>
-</Link>
+          <Button variant="primary" size="lg" showArrow>
+            Chat With Uss
+          </Button>
         </div>
       </div>
     </Section>
