@@ -214,7 +214,7 @@ export default function WeSeeYouSection(): JSX.Element {
         </div>
 
         <div className="text-center pt-2">
-          <Button variant="primary" size="lg" showArrow>
+          <Button href="https://cal.com/banish/contentq-exploratory-call-with-anish" variant="primary" size="lg" showArrow>
             Chat With Us
           </Button>
         </div>
