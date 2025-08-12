@@ -16,6 +16,7 @@ import { Testimonial } from '@/components/ui/testimonial';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import WhatWeDoSection from '@/components/ui/what-we-do-section';
 import { StatsWithText } from '@/components/ui/stats-section-with-text';
+import { StatsNew } from '@/components/ui/stats-section-new';
 import { HeroSection } from '@/components/ui/galaxy-interactive-hero-section';
 import AuthoritySprintSection from '@/components/ui/authority-sprint';
 import ResultsSection from '@/components/ui/results-section';
@@ -132,11 +133,11 @@ export default function Home() {
             <span className="text-white">The shift is already here.</span>
             <div className="shift-underline"></div>
           </SectionHeadline>
-          <Stats
+          <StatsNew
             stats={stats.map((stat, index) => ({
               ...stat,
-              trendDirection: index % 2 === 0 ? 'up' : 'down',
-              trend: index === 0 ? '+12%' : index === 1 ? '+15%' : index === 2 ? '+8%' : '+5%'
+              trendDirection: (index % 2 === 0 ? 'up' : 'down') as 'up' | 'down',
+              trend: index === 0 ? '+12%' : index === 1 ? '+15%' : '+8%'
             }))}
             currentStatIndex={currentStatIndex}
             colorMode="light"
