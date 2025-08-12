@@ -185,7 +185,6 @@ export default function WeSeeYouSection(): JSX.Element {
               icon={<Briefcase className="w-5 h-5" />}
               glowColor="blue"
               imageUrl="/home/project/public/images/founder copy.png"
-              fallbackUrl=""
             />
           </motion.div>
 
@@ -198,7 +197,6 @@ export default function WeSeeYouSection(): JSX.Element {
               icon={<TrendingUp className="w-5 h-5" />}
               glowColor="purple"
               imageUrl="/images/marketer.png"
-              fallbackUrl="https://images.unsplash.com/photo-1544148103-0773bf091fd3?q=80&w=1600&auto=format&fit=crop"
             />
           </motion.div>
 
@@ -211,7 +209,6 @@ export default function WeSeeYouSection(): JSX.Element {
               icon={<Users className="w-5 h-5" />}
               glowColor="green"
               imageUrl="/images/consultant.png"
-              fallbackUrl="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1600&auto=format&fit=crop"
             />
           </motion.div>
         </div>
