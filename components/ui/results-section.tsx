@@ -2,6 +2,7 @@ import React from 'react';
 import Section from '@/components/Section';
 import { SectionHeadline, BodyText } from '@/components/Typography';
 import { ResultsCardsWithHover } from './results-cards-with-hover';
+import Section from '@/components/Section';
 
 export default function ResultsSection() {
   return (
