@@ -48,4 +48,4 @@ export default function ResultsSection() {
       </div>
     </Section>
   );
-}
+      <div className="mt-16 bg-white rounded-2xl p-8 shadow-lg">
