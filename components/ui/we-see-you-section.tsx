@@ -184,7 +184,7 @@ export default function WeSeeYouSection(): JSX.Element {
               solution="We handle it: We build your complete content system—from company blog to founder thought leadership—powered by your insights, not your time"
               icon={<Briefcase className="w-5 h-5" />}
               glowColor="blue"
-              imageUrl="/home/project/public/images/founder copy.png"
+              imageUrl="/images/founder.png"
             />
           </motion.div>
 
